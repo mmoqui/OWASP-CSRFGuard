@@ -27,10 +27,14 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  -->
-<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+	<description>Owasp CsrfGuard Tag Library</description>
+	<display-name>Owasp CsrfGuard</display-name>
 	<tlib-version>1.2</tlib-version>
-	<jsp-version>2.0</jsp-version>
-	<short-name>Owasp CsrfGuard Tag Library</short-name>
+	<short-name>csrf</short-name>
 	<uri>http://www.owasp.org/index.php/Category:OWASP_CSRFGuard_Project/Owasp.CsrfGuard.tld</uri>
 	<tag>
 		<name>token</name>
@@ -60,11 +64,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	<tag>
 		<name>a</name>
 		<tag-class>org.owasp.csrfguard.tag.ATag</tag-class>
+    <body-content>empty</body-content>
 		<dynamic-attributes>true</dynamic-attributes>
 	</tag>
 	<tag>
 		<name>form</name>
 		<tag-class>org.owasp.csrfguard.tag.FormTag</tag-class>
+    <body-content>empty</body-content>
 		<dynamic-attributes>true</dynamic-attributes>
 	</tag>
 </taglib>
